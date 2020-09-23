@@ -14,5 +14,5 @@ while True:
     result_day = result_day + (result_day * (10 / 100))
     print(f'{dai}-й день: {"%.2f" % (result_day)}')
     if result_day > target_result:
-        print('На {} день спортсмен достиг результата - не менее {} км'.format(dai, "%.2f" % (result_day)))
+        print('На {} день спортсмен достиг результата - не менее {} км'.format(dai, "%.0f" % (result_day)))
         break
