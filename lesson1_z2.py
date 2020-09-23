@@ -20,4 +20,4 @@ elif first <= 86400:
     seconds = first % 60
     print(f'{hours:02}: {minutes:02}:{seconds:02}')
 else:
-    print('Вы вели больше 1 дня.')
+    print('Вы ввели больше 1 дня.')
