@@ -7,12 +7,12 @@ Created on Wed Sep 23 14:04:51 2020
 
 revenue = int(input('Введите значение выручки:'))
 cost = int(input('Введите значение издержек:'))
-profit=revenue-cost
-if (profit>0):
+profit = revenue - cost
+if profit > 0:
     print('Ваша выручка больше издержек')
-    print(f'Рентабельность вашей выручки: {revenue/profit}')
-    num_employees=int(input('Введите численость сотрудников для расчета прибыли из расчета на сотрудника: '))
-    profit_num_employees=profit/num_employees
+    print(f'Рентабельность вашей выручки: {revenue / profit}')
+    num_employees = int(input('Введите численость сотрудников для расчета прибыли из расчета на сотрудника: '))
+    profit_num_employees = profit / num_employees
     print(f'Ваша прибыль в рассчете на 1 сотрудника: {profit_num_employees}')
 else:
     print('Ваша выручка меньше издержек')
