@@ -13,11 +13,11 @@ if first<60:
 elif first<3600:
     minutes = first//60
     seconds = first % 60
-    print(f'00:{minutes}:{seconds}')
+    print(f'00:{minutes:02}:{ seconds:02}')
 elif first<=86400:
     hours=first//3600
     minutes = (first//3600)%60
     seconds = first % 60
-    print(f'{hours}:{minutes}:{seconds}')
+    print(f'{hours:02}: {minutes:02}:{ seconds:02}')
 else:
     print('Вы вели больше 1 дня.')
