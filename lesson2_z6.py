@@ -34,14 +34,14 @@ while True:
     products.append(sa)
     j += 1
 
-print('[')
+print('[', end='\n\n')
 for i in products:
     print(i)
-print(']')
+print(']', end='\n\n')
 # print(f'Тип данных products: {type(products)}')
 # print(products) - для вывода 1 строкой. просто не понял надо было копироват вывод как в постановке задачи или нет
 
-print('\n')
+
 
 print('Аналитика:')
 for i in range(len(products)):
@@ -55,9 +55,9 @@ analytics['цена'] = price
 analytics['количество'] = number
 analytics['ед'] = unit
 
-print('{')
+print('{', end='\n\n')
 for key, val in analytics.items():
     print(f'"{key}": {val}', end='\n')
-print('}')
+print('}', end='\n\n')
 # print(f'Тип данных products: {type(analytics)}')
 # print(analytics) - для вывода 1 строкой. просто не понял надо было копироват вывод как в постановке задачи или нет
