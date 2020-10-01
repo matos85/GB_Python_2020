@@ -1,10 +1,10 @@
 # функция написана так что бы не было важно какое количество слов пришло на вход.
-def int_func(words):
+def int_func(words):   
     res = []
-    for i in words:
+    for i in words.split():
         res.append(i.title())
     return res
 
 
-n = input('Ввоодите числа через пробел. Введено: ').split()
+n = input('Ввоодите числа через пробел. Введено: ')
 print(*int_func(n))
