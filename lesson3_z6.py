@@ -6,5 +6,5 @@ def int_func(words):
     return res
 
 
-n = input('Ввоодите числа через пробел. Введено: ')
+n = input('Вводите числа через пробел. Введено: ')
 print(*int_func(n))
