@@ -1,5 +1,5 @@
 from sys import argv
-from itertools import count, cycle
+from itertools import cycle
 
 param = cycle(argv[1:])
 k=0
