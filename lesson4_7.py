@@ -9,6 +9,7 @@ n = int(input('Введите факториал искомого числа: ')
 j = 1
 for el in fact(n):
     j = j * el
+    print(j)
     if el == n:
         break
 print(f'Факториал числа {n} равен: {j}')
