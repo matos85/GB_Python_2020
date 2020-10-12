@@ -20,7 +20,7 @@ class Car:
 
 class TownCar(Car):
     def __init__(self, name, speed, color, is_police):
-        super(TownCar, self).__init__(name, speed, color, is_police)
+        super().__init__()                  # super(TownCar, self).__init__(name, speed, color, is_police)
 
     def show_speed(self):
         if self.speed <= 60:
@@ -31,12 +31,12 @@ class TownCar(Car):
 
 class SportCar(Car):
     def __init__(self, name, speed, color, is_police):
-        super(SportCar, self).__init__(name, speed, color, is_police)
+         super().__init__()                             #super(SportCar, self).__init__(name, speed, color, is_police)
 
 
 class WorkCar(Car):
     def __init__(self, name, speed, color, is_police):
-        super(WorkCar, self).__init__(name, speed, color, is_police)
+         super().__init__()                             #super(WorkCar, self).__init__(name, speed, color, is_police)
 
     def show_speed(self):
         if self.speed <= 40:
@@ -47,7 +47,7 @@ class WorkCar(Car):
 
 class PoliceCar(Car):
     def __init__(self, name, speed, color, is_police):
-        super(PoliceCar, self).__init__(name, speed, color, is_police)
+         super().__init__()                                 #super(PoliceCar, self).__init__(name, speed, color, is_police)
 
 
 town_auto = TownCar('Nissan', 80, 'белый', False)
