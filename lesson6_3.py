@@ -1,14 +1,14 @@
 class Worker:
-    def __init__(self, name, surname, position):
+    def __init__(self, name, surname, position, wage, bonus):
         self.name = name
         self.surname = surname
         self.position = position
-        self._income = {"wage": 130156, "bonus": 100000}
+        self._income = {"wage": wage, "bonus": bonus}
 
 
 class Position(Worker):
-    def __init__(self, name, surname, position):
-        super(Position, self).__init__(name, surname, position)
+    def __init__(self, name, surname, position, wage, bonus):
+        super(Position, self).__init__( name, surname, position, wage, bonus)
         self.get_full_name()
         self.get_total_income()
 
@@ -19,4 +19,4 @@ class Position(Worker):
         print(f'Доход с учетом премии: {self._income["wage"] + self._income["bonus"]}')
 
 
-workers = Position('Иван', 'Иванов', 'Начальник')
+workers = Position('Иван', 'Иванов', 'Начальник', 100123, 130123)
