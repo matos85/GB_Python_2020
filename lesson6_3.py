@@ -8,7 +8,7 @@ class Worker:
 
 class Position(Worker):
     def __init__(self, name, surname, position, wage, bonus):
-        super(Position, self).__init__( name, surname, position, wage, bonus)
+        super(Position, self).__init__(name, surname, position, wage, bonus)
         self.get_full_name()
         self.get_total_income()
 
