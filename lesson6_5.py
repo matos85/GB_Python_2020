@@ -8,7 +8,7 @@ class Stationery:
 
 class Pen(Stationery):
     def __init__(self):
-         super().__init__()                 #super(Pen, self).__init__()
+         super(Pen, self).__init__()
 
     def draw(self, title):
         print(f'Запуск отрисовки {title}')
