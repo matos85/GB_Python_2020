@@ -6,7 +6,13 @@ class Cell:
         self.numbers += other
 
     def __sub__(self, other):  # вычитание
+        z = 0
+        z = z + self.numbers
         self.numbers -= other
+        if self.numbers <= 0:
+            self.numbers = z
+            print('Количестов клеток не может быть равна нуля или быть меньше')
+
 
     def __mul__(self, other):  # умножение
         self.numbers *= other
