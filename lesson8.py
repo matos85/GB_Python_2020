@@ -23,11 +23,11 @@ class LotBilet:
         self.bilet = self.line_1 + self.line_2 + self.line_3
 
     def print_bilet(self):
-        print('-' * 37)
-        print("%4s%4s%4s%4s%4s%4s%4s%4s%4s" % tuple(self.bilet[0:9]))
-        print("%4s%4s%4s%4s%4s%4s%4s%4s%4s" % tuple(self.bilet[9:18]))
-        print("%4s%4s%4s%4s%4s%4s%4s%4s%4s" % tuple(self.bilet[18:27]))
-        print('-' * 37)
+        print('-' * 27)
+        print("%3s" * 9 % tuple(self.bilet[0:9]))
+        print("%3s" * 9 % tuple(self.bilet[9:18]))
+        print("%3s" * 9 % tuple(self.bilet[18:27]))
+        print('-' * 27)
 
 
 class Gamer(LotBilet):
