@@ -11,9 +11,9 @@ class LotBilet:
         self.generate_number()
 
     def generate_number(self):
-        self.line_1 = [i for i in self.bilet[:5]]  # sorted([i for i in self.bilet[:5]])
-        self.line_2 = [i for i in self.bilet[5:10]]  # sorted([i for i in self.bilet[5:10]])
-        self.line_3 = [i for i in self.bilet[10:]]  # sorted([i for i in self.bilet[10:]])
+        self.line_1 = [i for i in self.bilet[:5]]  
+        self.line_2 = [i for i in self.bilet[5:10]]
+        self.line_3 = [i for i in self.bilet[10:]] 
 
         for i in range(1, 5):
             self.line_1.insert(random.randint(0, 5), ' ')
@@ -95,7 +95,6 @@ class Game(IterB, Gamer):
             if flag:
                 break
             print(f'Карточка: {self.player.name}а')
-            self.player.generate_number()
             self.player.print_bilet()
 
             for m, n in enumerate(self.pc.bilet):
@@ -105,7 +104,6 @@ class Game(IterB, Gamer):
             else:
                 print(f'В карточке {self.pc.name}а нет совпадений с боченком номер: {num}')
             print(f'Карточка: {self.pc.name}а')
-            self.pc.generate_number()
             self.pc.print_bilet()
             print(' ')
 
