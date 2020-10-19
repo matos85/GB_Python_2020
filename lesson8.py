@@ -72,19 +72,22 @@ class Game(IterB, Gamer):
             print(f'Ход номер: {bar}')
             print(f'Выпал боченок с номером: {num}')
             cross_out = input('Зачеркнуть цифру? Варианты ответа Y или N. Ваш ответ: ').lower()
-            for m, n in enumerate(self.player.bilet):
-                if n == num and cross_out == 'y':
-                    self.player.bilet[m] = 'x'
-                    print(f'В карточке {self.player.name}а есть совпадения с боченком номер: {num}')
-                    print(f'{self.player.name} зачеркивает номер: {num}')
-                if n != num and cross_out == 'y':
+            if cross_out == 'y':
+                for m, n in enumerate(self.player.bilet):
+                    if n == num:
+                        self.player.bilet[m] = 'x'
+                        print(f'В карточке {self.player.name}а есть совпадения с боченком номер: {num}')
+                        print(f'{self.player.name} зачеркивает номер: {num}')
+                        break
+                else:
                     print(f'{self.player.name} проиграл. Обманывать не хорошо')
                     flag = True
-                    break
-                if n == num and cross_out == 'n':
-                    print(f'{self.player.name} проиграл. Обманывать не хорошо')
-                    flag = True
-                    break
+
+            if cross_out == 'n':
+                for m, n in enumerate(self.player.bilet):
+                    if n == num:
+                        print(f'{self.player.name} проиграл. Обманывать не хорошо')
+                        flag = True
             else:
                 print(f'В карточке {self.player.name}а нет совпадений с боченком номер: {num}')
             if flag:
@@ -108,5 +111,4 @@ class Game(IterB, Gamer):
 gamer = Gamer('Игрок')
 comp = Gamer('Компьютер')
 game1 = Game(gamer, comp)
-
 game1.start()
