@@ -20,12 +20,14 @@ class LotBilet:
             self.line_2.insert(random.randint(0, 5), ' ')
             self.line_3.insert(random.randint(0, 5), ' ')
 
+        self.bilet = self.line_1 + self.line_2 + self.line_3
+
     def print_bilet(self):
-        print('-' * 23)
-        print(*self.line_1, sep=' ')
-        print(*self.line_2, sep=' ')
-        print(*self.line_3, sep=' ')
-        print('-' * 23)
+        print('-' * 37)
+        print("%4s%4s%4s%4s%4s%4s%4s%4s%4s" % tuple(self.bilet[0:9]))
+        print("%4s%4s%4s%4s%4s%4s%4s%4s%4s" % tuple(self.bilet[9:18]))
+        print("%4s%4s%4s%4s%4s%4s%4s%4s%4s" % tuple(self.bilet[18:27]))
+        print('-' * 37)
 
 
 class Gamer(LotBilet):
